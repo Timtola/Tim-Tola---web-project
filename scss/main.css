@@ -1,0 +1,80 @@
+nav {
+  background-color: #000046;
+  display: flex;
+  padding: 1em 5em;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+nav img {
+  width: 75px;
+}
+nav ul {
+  display: flex;
+  gap: 64px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+nav li {
+  list-style: none;
+}
+nav li:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+main .container {
+  display: flex;
+  padding: 5em 5em;
+}
+main .container h1 {
+  font-size: 4em;
+  color: #000046;
+}
+main .container img {
+  width: 650px;
+}
+main .container .text-header p {
+  font-size: 2em;
+  padding-left: 3em;
+}
+main .container .btn {
+  width: 100px;
+  height: 50px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 16px;
+  color: #000046;
+  margin-left: 1em;
+  border: 1px solid black;
+}
+
+.shop-section {
+  display: grid;
+  grid-template-rows: 0.5fr 9fr;
+  height: 100vh;
+  padding: 2em 5em;
+  gap: 24px;
+}
+.shop-section .search-container {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding-left: 1em;
+}
+.shop-section h1 {
+  font-size: 4em;
+  color: #000046;
+}
+.shop-section .cards {
+  border: 1px solid black;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 200vh;
+}

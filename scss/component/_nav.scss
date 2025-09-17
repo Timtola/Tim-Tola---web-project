@@ -1,0 +1,35 @@
+@import '../variable';
+
+nav {
+    background-color: $nav_bg;
+    display: flex;
+    padding: 1em 5em;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+
+    img {
+        width: 75px;
+    }
+
+    ul {
+        display: flex;
+        gap: 64px;
+    }
+
+    a {
+        color: $text_color;
+        text-decoration: none;
+        font-size: $font_nav;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    li:hover {
+        transform: scale(1.5);
+        transition: 0.5s;
+    }
+}
