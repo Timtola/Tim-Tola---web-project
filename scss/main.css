@@ -1,5 +1,7 @@
 nav {
-  background-color: #000046;
+  backdrop-filter: blur(100px);
+  box-shadow: 1px 1px 5px 0px rgb(194, 177, 177);
+  border: 1px solid rgb(194, 177, 177);
   display: flex;
   padding: 1em 5em;
   justify-content: space-between;
@@ -15,7 +17,7 @@ nav ul {
   gap: 64px;
 }
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 24px;
 }
@@ -55,26 +57,71 @@ main .container .btn {
 
 .shop-section {
   display: grid;
-  grid-template-rows: 0.5fr 9fr;
   height: 100vh;
   padding: 2em 5em;
   gap: 24px;
 }
 .shop-section .search-container {
-  border: 1px solid black;
   border-radius: 8px;
   padding-left: 1em;
+  height: 40px;
+  box-shadow: 1px 1px 5px 0px rgb(129, 127, 127);
+  border: none;
+}
+.shop-section select {
+  padding: 2em;
+  border: none;
 }
 .shop-section h1 {
   font-size: 4em;
   color: #000046;
 }
 .shop-section .cards {
-  border: 1px solid black;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shop-section .cards .card {
+  box-shadow: 1px 1px 10px 0px rgb(194, 177, 177);
+  border-radius: 8px;
+  width: 250px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+.shop-section .cards .card .infor {
+  padding: 1em;
+}
+.shop-section .cards .card img {
+  width: 250px;
+  height: 200px;
+  border-radius: 8px;
+}
+.shop-section .cards .card .price {
+  display: flex;
+}
+.shop-section .cards .card .price h2 {
+  font-size: 1.5em;
+}
+.shop-section .cards .card button {
+  background-color: orange;
+  padding: 0.5em;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+}
+.shop-section .cards .card .buy {
+  background-color: orange;
+}
+.shop-section .cards .checked {
+  color: orange;
 }
 
 body {
   padding: 0;
   margin: 0;
-  height: 200vh;
+  height: 500vh;
 }

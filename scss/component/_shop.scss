@@ -1,21 +1,80 @@
 @import "../variable";
 
-.shop-section{
+.shop-section {
     display: grid;
-    grid-template-rows: 0.5fr 9fr;
     height: 100vh;
     padding: 2em 5em;
     gap: 24px;
-    .search-container{
-        border: 1px solid black;
+
+    .search-container {
         border-radius: 8px;
         padding-left: 1em;
+        height: 40px;
+        box-shadow: 1px 1px 5px 0px rgb(129, 127, 127);
+        border: none;
     }
-    h1{
+
+    select {
+        padding: 2em;
+        border: none;
+    }
+
+    h1 {
         font-size: $greeting_header;
         color: $heading_color;
     }
-    .cards{
-        border: 1px solid black;
+
+    .cards {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            box-shadow: 1px 1px 10px 0px rgb(194, 177, 177);
+            border-radius: 8px;
+            width: $card_width;
+            height: $card_high;
+            display: grid;
+            grid-template-rows: 1fr 2fr;
+
+            // padding: 1em;
+            // gap: 24px;
+            .infor {
+                padding: 1em;
+            }
+
+            img {
+                width: $card_width;
+                height: $img_high;
+                border-radius: 8px;
+            }
+
+            .price {
+                display: flex;
+
+                h2 {
+                    font-size: 1.5em;
+                }
+            }
+
+            button {
+                background-color: orange;
+                padding: 0.5em;
+                border: none;
+                color: white;
+                width: 100px;
+                height: 30px;
+                border-radius: 8px;
+            }
+
+            .buy {
+                background-color: orange;
+            }
+        }
+
+        .checked {
+            color: orange;
+        }
     }
 }
