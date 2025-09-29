@@ -1,7 +1,7 @@
 @import '../variable';
 
 nav {
-    backdrop-filter: blur(100px);
+    background-color: $nav_bg;
     box-shadow: 1px 1px 5px 0px rgb(194, 177, 177);
     border: 1px solid rgb(194, 177, 177);
     display: flex;
@@ -9,7 +9,8 @@ nav {
     justify-content: space-between;
     position: sticky;
     top: 0;
-    overflow: hidden;
+    animation: nav;
+    animation-timeline: view();
 
     img {
         width: 75px;
@@ -33,5 +34,13 @@ nav {
     li:hover {
         transform: scale(1.5);
         transition: 0.5s;
+    }
+}
+@keyframes nav{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

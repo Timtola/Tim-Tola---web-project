@@ -1,8 +1,9 @@
 @import "../variable";
+@import "./nav";
 
 .shop-section {
     display: grid;
-    height: 100vh;
+    height: 230vh;
     padding: 2em 5em;
     gap: 24px;
 
@@ -37,6 +38,7 @@
             height: $card_high;
             display: grid;
             grid-template-rows: 1fr 2fr;
+            // animation-range: entry 0% cover  50%;
 
             // padding: 1em;
             // gap: 24px;
@@ -49,7 +51,10 @@
                 height: $img_high;
                 border-radius: 8px;
             }
-
+            img:hover{
+                transition: 1s;
+                transform: scale(0.7);
+            }
             .price {
                 display: flex;
 
@@ -58,7 +63,7 @@
                 }
             }
 
-            button {
+            .add {
                 background-color: orange;
                 padding: 0.5em;
                 border: none;
@@ -67,11 +72,27 @@
                 height: 30px;
                 border-radius: 8px;
             }
+            .add:hover{
+                transform:translateY(-1em);
+                transition: 0.5s;
+            }
+            .buy:hover{
+                transform:translateY(-1em);
+                transition: 0.5s;
+            }
 
             .buy {
-                background-color: orange;
+                background-color: white;
+                padding: 0.5em;
+                border: none;
+                color: $nav_bg;
+                width: 100px;
+                height: 30px;
+                border-radius: 8px;
+                border: 1px solid orange;
             }
         }
+
 
         .checked {
             color: orange;

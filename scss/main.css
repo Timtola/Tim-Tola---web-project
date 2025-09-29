@@ -1,5 +1,5 @@
 nav {
-  backdrop-filter: blur(100px);
+  background-color: #000046;
   box-shadow: 1px 1px 5px 0px rgb(194, 177, 177);
   border: 1px solid rgb(194, 177, 177);
   display: flex;
@@ -7,7 +7,8 @@ nav {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  overflow: hidden;
+  animation: nav;
+  animation-timeline: view();
 }
 nav img {
   width: 75px;
@@ -17,7 +18,7 @@ nav ul {
   gap: 64px;
 }
 nav a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 24px;
 }
@@ -29,6 +30,14 @@ nav li:hover {
   transition: 0.5s;
 }
 
+@keyframes nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 main .container {
   display: flex;
   padding: 5em 5em;
@@ -55,9 +64,49 @@ main .container .btn {
   border: 1px solid black;
 }
 
+nav {
+  background-color: #000046;
+  box-shadow: 1px 1px 5px 0px rgb(194, 177, 177);
+  border: 1px solid rgb(194, 177, 177);
+  display: flex;
+  padding: 1em 5em;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  animation: nav;
+  animation-timeline: view();
+}
+nav img {
+  width: 75px;
+}
+nav ul {
+  display: flex;
+  gap: 64px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+nav li {
+  list-style: none;
+}
+nav li:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+@keyframes nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .shop-section {
   display: grid;
-  height: 100vh;
+  height: 230vh;
   padding: 2em 5em;
   gap: 24px;
 }
@@ -98,13 +147,17 @@ main .container .btn {
   height: 200px;
   border-radius: 8px;
 }
+.shop-section .cards .card img:hover {
+  transition: 1s;
+  transform: scale(0.7);
+}
 .shop-section .cards .card .price {
   display: flex;
 }
 .shop-section .cards .card .price h2 {
   font-size: 1.5em;
 }
-.shop-section .cards .card button {
+.shop-section .cards .card .add {
   background-color: orange;
   padding: 0.5em;
   border: none;
@@ -113,11 +166,50 @@ main .container .btn {
   height: 30px;
   border-radius: 8px;
 }
+.shop-section .cards .card .add:hover {
+  transform: translateY(-1em);
+  transition: 0.5s;
+}
+.shop-section .cards .card .buy:hover {
+  transform: translateY(-1em);
+  transition: 0.5s;
+}
 .shop-section .cards .card .buy {
-  background-color: orange;
+  background-color: white;
+  padding: 0.5em;
+  border: none;
+  color: #000046;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid orange;
 }
 .shop-section .cards .checked {
   color: orange;
+}
+
+.about-section {
+  height: 130vh;
+  padding: 2em 5em;
+  display: grid;
+  gap: 2em;
+}
+.about-section h1 {
+  font-size: 3em;
+}
+.about-section p {
+  font-size: 1.5em;
+}
+.about-section q {
+  font-size: 1.5em;
+}
+.about-section .mission, .about-section .value {
+  display: flex;
+  justify-content: space-between;
+}
+.about-section .mission img, .about-section .value img {
+  width: 400px;
+  height: 400px;
 }
 
 body {

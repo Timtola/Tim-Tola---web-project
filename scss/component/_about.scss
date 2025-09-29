@@ -1,0 +1,24 @@
+@import '../variable';
+.about-section{
+    height: 130vh;
+    padding: 2em 5em;
+    display: grid;
+    gap: 2em;
+    h1{
+        font-size: 3em;
+    }
+    p{
+        font-size: 1.5em;
+    }
+    q{
+        font-size: 1.5em;
+    }
+    .mission, .value{
+        display: flex;
+        justify-content: space-between;
+        img{
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
