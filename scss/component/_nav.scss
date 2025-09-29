@@ -7,10 +7,6 @@ nav {
     display: flex;
     padding: 1em 5em;
     justify-content: space-between;
-    position: sticky;
-    top: 0;
-    animation: nav;
-    animation-timeline: view();
 
     img {
         width: 75px;
@@ -34,13 +30,5 @@ nav {
     li:hover {
         transform: scale(1.5);
         transition: 0.5s;
-    }
-}
-@keyframes nav{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
     }
 }

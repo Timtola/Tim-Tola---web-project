@@ -14,11 +14,14 @@
         font-size: 1.5em;
     }
     .mission, .value{
+        box-shadow: 0px 0px 7px 0px rgb(192, 173, 173);
+        border-radius: 16px;
+        padding: 2em;
         display: flex;
         justify-content: space-between;
         img{
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
         }
     }
 }

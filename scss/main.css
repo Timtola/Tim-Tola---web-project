@@ -5,10 +5,6 @@ nav {
   display: flex;
   padding: 1em 5em;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  animation: nav;
-  animation-timeline: view();
 }
 nav img {
   width: 75px;
@@ -30,14 +26,6 @@ nav li:hover {
   transition: 0.5s;
 }
 
-@keyframes nav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 main .container {
   display: flex;
   padding: 5em 5em;
@@ -71,10 +59,6 @@ nav {
   display: flex;
   padding: 1em 5em;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  animation: nav;
-  animation-timeline: view();
 }
 nav img {
   width: 75px;
@@ -96,19 +80,14 @@ nav li:hover {
   transition: 0.5s;
 }
 
-@keyframes nav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .shop-section {
   display: grid;
-  height: 230vh;
+  height: 440vh;
   padding: 2em 5em;
   gap: 24px;
+}
+.shop-section .input {
+  width: 800px;
 }
 .shop-section .search-container {
   border-radius: 8px;
@@ -116,6 +95,7 @@ nav li:hover {
   height: 40px;
   box-shadow: 1px 1px 5px 0px rgb(129, 127, 127);
   border: none;
+  width: 300px;
 }
 .shop-section select {
   padding: 2em;
@@ -134,17 +114,21 @@ nav li:hover {
 .shop-section .cards .card {
   box-shadow: 1px 1px 10px 0px rgb(194, 177, 177);
   border-radius: 8px;
-  width: 250px;
-  height: 500px;
+  width: 437px;
+  height: 600px;
   display: grid;
   grid-template-rows: 1fr 2fr;
+  animation: anime;
+  animation-duration: 3s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .shop-section .cards .card .infor {
   padding: 1em;
 }
 .shop-section .cards .card img {
-  width: 250px;
-  height: 200px;
+  width: 437px;
+  height: 300px;
   border-radius: 8px;
 }
 .shop-section .cards .card img:hover {
@@ -188,6 +172,16 @@ nav li:hover {
   color: orange;
 }
 
+@keyframes anime {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .about-section {
   height: 130vh;
   padding: 2em 5em;
@@ -204,16 +198,200 @@ nav li:hover {
   font-size: 1.5em;
 }
 .about-section .mission, .about-section .value {
+  box-shadow: 0px 0px 7px 0px rgb(192, 173, 173);
+  border-radius: 16px;
+  padding: 2em;
   display: flex;
   justify-content: space-between;
 }
 .about-section .mission img, .about-section .value img {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
+}
+
+.contact-container {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.2s ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 2em 5em;
+  padding: 2em 5em;
+}
+.contact-container .map {
+  margin-top: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 200px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-container .contact-info h2,
+.contact-container .contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+  position: relative;
+}
+.contact-container .contact-info h2::after,
+.contact-container .contact-form h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+.contact-container .info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+.contact-container .info-item span {
+  font-size: 1.5rem;
+  color: #4facfe;
+}
+.contact-container .socials {
+  margin-top: 20px;
+}
+.contact-container .socials a {
+  display: inline-block;
+  margin-right: 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #4facfe;
+  border: 1px solid #4facfe;
+  padding: 8px 12px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.contact-container .socials a:hover {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.3);
+}
+.contact-container .contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact-container .contact-form input,
+.contact-container .contact-form textarea {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  background: #f7f9fc;
+  color: #333;
+  transition: 0.3s ease;
+  border: 1px solid #ddd;
+}
+.contact-container .contact-form input:focus,
+.contact-container .contact-form textarea:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
+  background: #fff;
+}
+.contact-container .contact-form textarea {
+  resize: none;
+  min-height: 130px;
+}
+.contact-container .contact-form button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contact-container .contact-form button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4);
+}
+
+footer {
+  background-color: #000046;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #ff4d4d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-container p {
+  line-height: 1.6;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff4d4d;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff4d4d;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #aaa;
 }
 
 body {
   padding: 0;
   margin: 0;
-  height: 500vh;
+  height: 600vh;
 }
