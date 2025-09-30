@@ -82,7 +82,6 @@ nav li:hover {
 
 .shop-section {
   display: grid;
-  height: 440vh;
   padding: 2em 5em;
   gap: 24px;
 }
@@ -393,5 +392,4 @@ footer {
 body {
   padding: 0;
   margin: 0;
-  height: 600vh;
 }
