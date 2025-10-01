@@ -1,23 +1,28 @@
 @import '../variable';
-main{
-    .container{
+
+main {
+    .container {
         display: flex;
 
         padding: 5em 5em;
-        h1{
+
+        h1 {
             font-size: $greeting_header;
             color: $heading_color;
         }
-        img{
+
+        img {
             width: 650px;
         }
-        .text-header{
-            p{
+
+        .text-header {
+            p {
                 font-size: 2em;
                 padding-left: 3em;
             }
         }
-        .btn{
+
+        .btn {
             width: 100px;
             height: 50px;
             font-size: 1em;

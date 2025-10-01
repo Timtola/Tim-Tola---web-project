@@ -7,7 +7,24 @@ nav {
     display: flex;
     padding: 1em 5em;
     justify-content: space-between;
-
+    .nav-righ{
+        display: flex;
+        gap: 64px;
+        align-items: center;
+    }
+    .log{
+        display: flex;
+        gap: 16px;
+    }
+    .user{
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+    .login, .logout{
+        width: 100px;
+        height: 50px;
+    }
     img {
         width: 75px;
     }
