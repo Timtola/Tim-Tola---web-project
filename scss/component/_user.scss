@@ -1,0 +1,54 @@
+@import '../variable';
+
+.profile-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+        border: 3px solid #007BFF;
+    }
+
+    h2 {
+        margin: 10px 0;
+        font-size: 22px;
+        color: #333;
+
+        p {
+            color: #555;
+            margin: 5px 0;
+        }
+    }
+
+    .profile-info {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .profile-info strong {
+        color: #007BFF;
+    }
+
+    .btn-2 {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007BFF;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn-2:hover {
+        background: #0056b3;
+    }
+}

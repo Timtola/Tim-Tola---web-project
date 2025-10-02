@@ -4,7 +4,11 @@
 @import './component/about';
 @import './component/contact';
 @import './component/footer.scss';
-
+@import './component/login';
+@import './component/user';
+select{
+    display: none;
+}
 body {
     padding: 0;
     margin: 0;
