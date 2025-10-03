@@ -6,35 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../scss/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            height: 500vh;
-            padding: 0;
-            margin: 0;
-        }
     </style>
 </head>
 
 <body>
-    <nav>
+     <nav>
         <!-- <img src="./img/nav/tech-computer-logo-template_23-2149199401.jpg" alt=""> -->
         <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact us</a></li>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <li><a href="#">Home</a></li>
+            <li><a href="./pages/shop.html">Shop</a></li>
+            <li><a href="./pages/about.html">About</a></li>
+            <li><a href="./pages/contact.html">Contact us</a></li>
         </ul>
+        <select name="" id="">
+            <option value="">Home</option>
+            <option value="">Shop</option>
+            <option value="">About</option>
+            <option value="">Contact</option>
+        </select>
         <div class="nav-righ">
-        <div class="user">
-            <i class="fa fa-shopping-cart" style="font-size:32px;color:white"></i>
-            <i class="fa fa-user" style="font-size:32px;color:white"></i>
+            <div class="user">
+                <i class="fa fa-shopping-cart" style="font-size:32px;color:white"></i>
+                <a href="./nav-info/user.html"><i class="fa fa-user" style="font-size:32px;color:white"></i></a>
+            </div>
+            <div class="log">
+                <a href="./nav-info/login.html"><button class="login">Log in</button></a>
+                <button class="logout">Log out</button>
+            </div>
         </div>
-        <div class="log">
-            <button class="login">Log in</button>
-            <button class="logout">Log out</button>
-        </div>
-    </div>
     </nav>
     <main>
         <div class="shop-section">
