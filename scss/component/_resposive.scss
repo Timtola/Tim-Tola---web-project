@@ -21,16 +21,16 @@
         gap: 4px;
         justify-content: flex-start;
         padding: 0em 0em;
-        ul, li a{
-            display: none;
-        }
-        li{
+        .menu1{
             display: none;
         }
         select{
             display: inline;
             width: 80px;
             height: 30px;
+        }
+        .menu{
+            display: flex;
         }
     }
     .shop-section {

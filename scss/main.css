@@ -40,8 +40,18 @@ nav li {
   list-style: none;
 }
 nav li:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
   transition: 0.5s;
+}
+nav .menu {
+  display: none;
+}
+nav .sidebar {
+  display: none;
+  flex-direction: column;
+}
+nav .sidebar .back {
+  font-weight: bold;
 }
 
 main .container {
@@ -253,7 +263,6 @@ main .container .btn {
   text-decoration: none;
   font-size: 1.2rem;
   color: #4facfe;
-  border: 1px solid #4facfe;
   padding: 8px 12px;
   border-radius: 50%;
   transition: 0.3s ease;
@@ -524,16 +533,16 @@ footer {
     justify-content: flex-start;
     padding: 0em 0em;
   }
-  nav ul, nav li a {
-    display: none;
-  }
-  nav li {
+  nav .menu1 {
     display: none;
   }
   nav select {
     display: inline;
     width: 80px;
     height: 30px;
+  }
+  nav .menu {
+    display: flex;
   }
   .shop-section {
     display: flex;

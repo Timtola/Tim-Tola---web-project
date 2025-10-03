@@ -44,7 +44,17 @@ nav {
     }
 
     li:hover {
-        transform: scale(1.5);
+        transform: scale(1.1);
         transition: 0.5s;
+    }
+    .menu{
+        display: none;
+    }
+    .sidebar{
+        display: none;
+        flex-direction: column;
+        .back{
+            font-weight: bold;
+        }
     }
 }
